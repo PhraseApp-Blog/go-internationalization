@@ -1,0 +1,22 @@
+{
+    "language": "en",
+    "messages": [
+        {
+            "id": "Hello, {Host}",
+            "message": "Hello, {Host}",
+            "translation": "Hello, {Host}",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Host",
+                    "string": "%[1]v",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "html.EscapeString(r.Host)"
+                }
+            ],
+            "fuzzy": true
+        }
+    ]
+}

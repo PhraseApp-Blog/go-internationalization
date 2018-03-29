@@ -1,0 +1,20 @@
+{
+    "language": "el",
+    "messages": [
+        {
+            "id": "Hello, {Host}",
+            "message": "Hello, {Host}",
+            "translation": "Γιά σου %[1]v",
+            "placeholders": [
+                {
+                    "id": "Host",
+                    "string": "%[1]v",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "html.EscapeString(r.Host)"
+                }
+            ]
+        }
+    ]
+}

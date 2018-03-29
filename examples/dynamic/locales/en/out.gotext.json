@@ -1,0 +1,96 @@
+{
+    "language": "en",
+    "messages": [
+        {
+            "id": "Hello world!",
+            "message": "Hello world!",
+            "translation": "Hello world!",
+            "translatorComment": "Copied from source.",
+            "fuzzy": true
+        },
+        {
+            "id": "Hello",
+            "message": "Hello",
+            "translation": "Hello",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "World",
+                    "string": "%[1]v",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "\"world!\""
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "Hello {City}!",
+            "message": "Hello {City}!",
+            "translation": "Hello {City}!",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "City",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "city"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "{Person} is visiting {Place}!",
+            "message": "{Person} is visiting {Place}!",
+            "translation": "{Person} is visiting {Place}!",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Person",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "person"
+                },
+                {
+                    "id": "Place",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "place"
+                }
+            ],
+            "fuzzy": true
+        },
+        {
+            "id": "{Miles} miles traveled ({Miles_1})",
+            "message": "{Miles} miles traveled ({Miles_1})",
+            "translation": "{Miles} miles traveled ({Miles_1})",
+            "translatorComment": "Copied from source.",
+            "placeholders": [
+                {
+                    "id": "Miles",
+                    "string": "%.2[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "miles"
+                },
+                {
+                    "id": "Miles_1",
+                    "string": "%[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "miles"
+                }
+            ],
+            "fuzzy": true
+        }
+    ]
+}

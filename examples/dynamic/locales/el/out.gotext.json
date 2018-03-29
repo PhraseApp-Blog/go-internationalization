@@ -1,0 +1,86 @@
+{
+    "language": "el",
+    "messages": [
+        {
+            "id": "Hello world!",
+            "message": "Hello world!",
+            "translation": "Γιά σου Κόσμε!"
+        },
+        {
+            "id": "Hello",
+            "message": "Hello",
+            "translation": "Γιά σας %[1]v",
+            "placeholders": [
+                {
+                    "id": "World",
+                    "string": "%[1]v",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "\"world!\""
+                }
+            ]
+        },
+        {
+            "id": "Hello {City}!",
+            "message": "Hello {City}!",
+            "translation": "Γιά σου %[1]s",
+            "placeholders": [
+                {
+                    "id": "City",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "city"
+                }
+            ]
+        },
+        {
+            "id": "{Person} is visiting {Place}!",
+            "message": "{Person} is visiting {Place}!",
+            "translation": "Ο %[1]s επισκέπτεται την %[2]s",
+            "placeholders": [
+                {
+                    "id": "Person",
+                    "string": "%[1]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 1,
+                    "expr": "person"
+                },
+                {
+                    "id": "Place",
+                    "string": "%[2]s",
+                    "type": "string",
+                    "underlyingType": "string",
+                    "argNum": 2,
+                    "expr": "place"
+                }
+            ]
+        },
+        {
+            "id": "{Miles} miles traveled ({Miles_1})",
+            "message": "{Miles} miles traveled ({Miles_1})",
+            "translation": "%.2[1]f μίλια ταξίδεψε %[1]f",
+            "placeholders": [
+                {
+                    "id": "Miles",
+                    "string": "%.2[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "miles"
+                },
+                {
+                    "id": "Miles_1",
+                    "string": "%[1]f",
+                    "type": "float64",
+                    "underlyingType": "float64",
+                    "argNum": 1,
+                    "expr": "miles"
+                }
+            ]
+        }
+    ]
+}
