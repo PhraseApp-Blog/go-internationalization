@@ -1,25 +1,27 @@
 #!/bin/bash
 
-# List of locales
-locales=("en_US" "el_GR" "ar_SA")
+initialize_locale_directories() {
+    # Iterate over each provided language code
+    for lang_code in "$@"; do
+        # Define locale directory path
+        locale_dir="locales/$lang_code/LC_MESSAGES"
+        
+        # Create the locale directory if it doesn't exist
+        mkdir -p "$locale_dir"
+        
+        # Initialize the default.po file using msginit
+        msginit --no-translator -o "$locale_dir/default.po" -l "$lang_code" -i "locales/default.po"
+        
+        # Print status message
+        echo "Initialized locale directory for $lang_code"
+    done
+}
 
-# Path to the template .pot file
-template_file="locales/default.po"
+# Check if any language codes are provided as arguments
+if [ $# -eq 0 ]; then
+    echo "Error: No language codes provided. Please provide one or more language codes as arguments."
+    exit 1
+fi
 
-# Loop through each locale
-for locale in "${locales[@]}"; do
-    # Output directory for the .po file
-    output_dir="locales/$locale/LC_MESSAGES"
-
-    # Create the output directory if it doesn't exist
-    mkdir -p "$output_dir"
-
-    # Output file path for the .po file
-    output_file="$output_dir/default.po"
-
-    # Call msginit to initialize the .po file
-    msginit --no-translator -o "$output_file" -l "$locale" -i "$template_file"
-
-    # Print status message
-    echo "Initialized $output_file"
-done
+# Call the function to initialize locale directories with provided language codes
+initialize_locale_directories "$@"
