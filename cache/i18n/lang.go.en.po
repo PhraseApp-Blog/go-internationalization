@@ -1,0 +1,20 @@
+# filename: pkg/i18n/lang.go, offset: 314, line: 14, column: 20
+msgid "ar_SA"
+msgstr "ar_SA"
+
+# filename: pkg/i18n/lang.go, offset: 640, line: 23, column: 11
+msgid "ltr"
+msgstr "ltr"
+
+# filename: pkg/i18n/lang.go, offset: 682, line: 24, column: 11
+msgid "rtl"
+msgstr "rtl"
+
+# filename: pkg/i18n/lang.go, offset: 212, line: 12, column: 20
+msgid "el_GR"
+msgstr "el_GR"
+
+# filename: pkg/i18n/lang.go, offset: 262, line: 13, column: 20
+msgid "en_US"
+msgstr "en_US"
+

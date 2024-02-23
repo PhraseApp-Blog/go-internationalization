@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html dir="{{.Dir}}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Speedrun</title>
+    <link rel="stylesheet" href="/static/stylesheet.css">
+</head>
+
+<body>
+    <label for="selectLanguage">{{T "Select Language"}}</label>
+    <select id="language-selector">
+        {{range .SupportedLanguages}}
+        <option value="{{.}}" {{if eq . $.CurrentLanguage}}selected{{end}}>{{ T . }}</option>
+        {{end}}
+    </select>
+    <h2>{{T .Header}}</h2>
+    <form id="speedrunForm">
+        <label for="playerName">{{T .PlayerName}}:</label>
+        <input type="text" id="playerName" name="playerName" required><br>
+
+        <label for="game">{{T .Game}}:</label>
+        <input type="text" id="game" name="game" required><br>
+
+        <label for="category">{{T .Category}}:</label>
+        <input type="text" id="category" name="category" required><br>
+
+        <label for="time">{{T .Time}}:</label>
+        <input type="text" id="time" name="time" required><br>
+
+        <button type="submit">{{T .Submit}}</button>
+    </form>
+
+    <script>
+        const speedrunForm = document.getElementById('speedrunForm');
+
+        // Handle form submission to add new speedrun
+        speedrunForm.addEventListener('submit', event => {
+            event.preventDefault();
+
+            const formData = new FormData(speedrunForm);
+            const speedrunData = {
+                playerName: formData.get('playerName'),
+                game: formData.get('game'),
+                category: formData.get('category'),
+                time: formData.get('time')
+            };
+
+            fetch('/speedruns/add', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(speedrunData)
+            })
+                .then(response => {
+                    if (response.ok) {
+                        return response.json();
+                    }
+                    throw new Error('Failed to add speedrun');
+                })
+                .then(() => {
+                    // Redirect to index.html after successful submission
+                    window.location.href = '/';
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+    <!-- Your existing JavaScript code here -->
+    <script>
+        const languageSelector = document.getElementById("language-selector");
+
+        languageSelector.addEventListener("change", () => {
+            const selectedLanguage = languageSelector.value;
+            const currentUrl = window.location.href;
+            const newUrl = updateQueryStringParameter(currentUrl, 'lang', selectedLanguage);
+            window.location.href = newUrl;
+        });
+        function updateQueryStringParameter(uri, key, value) {
+            const re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+            const separator = uri.indexOf('?') !== -1 ? "&" : "?";
+            if (uri.match(re)) {
+                return uri.replace(re, '$1' + key + "=" + value + '$2');
+            } else {
+                return uri + separator + key + "=" + value;
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+[
+   {
+      "id": "json:\"player_name\"",
+      "translation": "json:\"player_name\"",
+      "modified": false
+   },
+   {
+      "id": "json:\"game\"",
+      "translation": "json:\"game\"",
+      "modified": false
+   },
+   {
+      "id": "json:\"category\"",
+      "translation": "json:\"category\"",
+      "modified": false
+   },
+   {
+      "id": "json:\"time\"",
+      "translation": "json:\"time\"",
+      "modified": false
+   },
+   {
+      "id": "json:\"submitted_at\"",
+      "translation": "json:\"submitted_at\"",
+      "modified": false
+   }
+]

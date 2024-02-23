@@ -1,0 +1,20 @@
+# filename: pkg/model/speedrun.go, offset: 235, line: 10, column: 24
+msgid "json:\"submitted_at\""
+msgstr "json:\"submitted_at\""
+
+# filename: pkg/model/speedrun.go, offset: 76, line: 6, column: 24
+msgid "json:\"player_name\""
+msgstr "json:\"player_name\""
+
+# filename: pkg/model/speedrun.go, offset: 120, line: 7, column: 24
+msgid "json:\"game\""
+msgstr "json:\"game\""
+
+# filename: pkg/model/speedrun.go, offset: 157, line: 8, column: 24
+msgid "json:\"category\""
+msgstr "json:\"category\""
+
+# filename: pkg/model/speedrun.go, offset: 198, line: 9, column: 24
+msgid "json:\"time\""
+msgstr "json:\"time\""
+

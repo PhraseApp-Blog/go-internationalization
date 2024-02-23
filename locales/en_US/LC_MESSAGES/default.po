@@ -1,0 +1,225 @@
+msgid ""
+msgstr ""
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Phrase (phrase.com)\n"
+
+# filename: pkg/handlers/handlers.go, offset: 2209, line: 69, column: 25
+msgid "Submit"
+msgstr "Submit"
+
+# filename: pkg/handlers/handlers.go, offset: 795, line: 25, column: 16
+msgid "static/"
+msgstr "static/"
+
+# filename: pkg/handlers/handlers.go, offset: 1442, line: 49, column: 25
+msgid "Speedrun Leaderboard"
+msgstr "Speedrun Leaderboard"
+
+# filename: pkg/handlers/handlers.go, offset: 2102, line: 66, column: 25
+msgid "Player Name"
+msgstr "Player Name"
+
+# filename: pkg/handlers/handlers.go, offset: 2173, line: 68, column: 25
+msgid "Category"
+msgstr "Category"
+
+# filename: pkg/handlers/handlers.go, offset: 2243, line: 70, column: 25
+msgid "Time"
+msgstr "Time"
+
+# filename: pkg/handlers/handlers.go, offset: 2058, line: 65, column: 25
+msgid "Add New Speedrun"
+msgstr "Add New Speedrun"
+
+# filename: pkg/handlers/handlers.go, offset: 1332, line: 47, column: 23
+msgid "index.html"
+msgstr "index.html"
+
+# filename: pkg/handlers/handlers.go, offset: 2141, line: 67, column: 25
+msgid "Game"
+msgstr "Game"
+
+# filename: pkg/handlers/handlers.go, offset: 1629, line: 54, column: 25
+msgid "Submitted At"
+msgstr "Submitted At"
+
+# filename: pkg/handlers/handlers.go, offset: 1949, line: 63, column: 23
+msgid "speedrun.html"
+msgstr "speedrun.html"
+
+# filename: pkg/handlers/handlers.go, offset: 2870, line: 84, column: 41
+msgid "lang"
+msgstr "lang"
+
+# filename: pkg/i18n/i18n.go, offset: 1225, line: 60, column: 21
+msgid "LC_ALL"
+msgstr "LC_ALL"
+
+# filename: pkg/i18n/i18n.go, offset: 1437, line: 68, column: 19
+msgid "LANG"
+msgstr "LANG"
+
+# filename: pkg/i18n/i18n.go, offset: 2454, line: 108, column: 35
+msgid "el"
+msgstr "el"
+
+# filename: pkg/i18n/i18n.go, offset: 2873, line: 128, column: 33
+msgid "Accept-Language"
+msgstr "Accept-Language"
+
+# filename: pkg/i18n/i18n.go, offset: 4051, line: 166, column: 19
+msgid "02/01/2006 15:04:05"
+msgstr "02/01/2006 15:04:05"
+
+# filename: pkg/i18n/i18n.go, offset: 5110, line: 202, column: 19
+msgid "%d"
+msgstr "%d"
+
+# filename: pkg/i18n/i18n.go, offset: 228, line: 19, column: 18
+msgid "default"
+msgstr "default"
+
+# filename: pkg/i18n/i18n.go, offset: 1128, line: 56, column: 21
+msgid "LANGUAGE"
+msgstr "LANGUAGE"
+
+# filename: pkg/i18n/i18n.go, offset: 1325, line: 64, column: 21
+msgid "LC_MESSAGES"
+msgstr "LC_MESSAGES"
+
+# filename: pkg/i18n/i18n.go, offset: 3015, line: 133, column: 10
+msgid "en"
+msgstr "en"
+
+# filename: pkg/i18n/i18n.go, offset: 3695, line: 155, column: 46
+msgid "date_formats.json"
+msgstr "date_formats.json"
+
+# filename: pkg/i18n/i18n.go, offset: 379, line: 27, column: 29
+msgid "locales"
+msgstr "locales"
+
+# filename: pkg/i18n/i18n.go, offset: 794, line: 47, column: 14
+msgid "languageCode:"
+msgstr "languageCode:"
+
+# filename: pkg/i18n/lang.go, offset: 314, line: 14, column: 20
+
+
+# filename: pkg/i18n/lang.go, offset: 640, line: 23, column: 11
+msgid "ltr"
+msgstr "ltr"
+
+# filename: pkg/i18n/lang.go, offset: 682, line: 24, column: 11
+msgid "rtl"
+msgstr "rtl"
+
+# filename: pkg/i18n/lang.go, offset: 212, line: 12, column: 20
+msgid "el_GR"
+msgstr "Greek"
+
+msgid "en_US"
+msgstr "English"
+
+msgid "ar_SA"
+msgstr "Arabic"
+
+# filename: main.go, offset: 2592, line: 99, column: 29
+msgid "Super Mario 64"
+msgstr "Super Mario 64"
+
+# filename: main.go, offset: 2761, line: 100, column: 93
+msgid "1:20:41"
+msgstr "1:20:41"
+
+# filename: main.go, offset: 3005, line: 111, column: 18
+msgid "/speedruns"
+msgstr "/speedruns"
+
+# filename: main.go, offset: 3108, line: 113, column: 18
+msgid "/speedrun.html"
+msgstr "/speedrun.html"
+
+# filename: main.go, offset: 3364, line: 120, column: 22
+msgid ":8080"
+msgstr ":8080"
+
+# filename: main.go, offset: 2578, line: 99, column: 15
+msgid "Alex"
+msgstr "Alex"
+
+# filename: main.go, offset: 2697, line: 100, column: 29
+msgid "The Legend of Zelda: Ocarina of Time"
+msgstr "The Legend of Zelda: Ocarina of Time"
+
+# filename: main.go, offset: 2893, line: 106, column: 14
+msgid "failed to initialize i18n: %v"
+msgstr "failed to initialize i18n: %v"
+
+# filename: main.go, offset: 3053, line: 112, column: 18
+msgid "/speedruns/add"
+msgstr "/speedruns/add"
+
+# filename: main.go, offset: 3212, line: 116, column: 43
+msgid "/static/"
+msgstr "/static/"
+
+# filename: main.go, offset: 3617, line: 129, column: 33
+msgid "application/json"
+msgstr "application/json"
+
+# filename: main.go, offset: 2747, line: 100, column: 79
+msgid "Any%"
+msgstr "Any%"
+
+# filename: main.go, offset: 2634, line: 99, column: 71
+msgid "16:58"
+msgstr "16:58"
+
+# filename: main.go, offset: 2683, line: 100, column: 15
+msgid "Theo"
+msgstr "Theo"
+
+# filename: main.go, offset: 3249, line: 116, column: 80
+msgid "./static"
+msgstr "./static"
+
+# filename: main.go, offset: 4226, line: 150, column: 26
+msgid "Speedrun submitted successfully!"
+msgstr "Speedrun submitted successfully!"
+
+# filename: main.go, offset: 2970, line: 110, column: 18
+msgid "/"
+msgstr "/"
+
+# filename: main.go, offset: 3302, line: 119, column: 21
+msgid "Server listening on port %d..."
+msgstr "Server listening on port %d..."
+
+# filename: main.go, offset: 3601, line: 129, column: 17
+msgid "Content-Type"
+msgstr "Content-Type"
+
+# filename: pkg/model/speedrun.go, offset: 235, line: 10, column: 24
+msgid "json:\"submitted_at\""
+msgstr "json:\"submitted_at\""
+
+# filename: pkg/model/speedrun.go, offset: 76, line: 6, column: 24
+msgid "json:\"player_name\""
+msgstr "json:\"player_name\""
+
+# filename: pkg/model/speedrun.go, offset: 120, line: 7, column: 24
+msgid "json:\"game\""
+msgstr "json:\"game\""
+
+# filename: pkg/model/speedrun.go, offset: 157, line: 8, column: 24
+msgid "json:\"category\""
+msgstr "json:\"category\""
+
+# filename: pkg/model/speedrun.go, offset: 198, line: 9, column: 24
+msgid "json:\"time\""
+msgstr "json:\"time\""

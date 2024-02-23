@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html dir="{{.Dir}}">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{T .Title}}</title>
+    <link rel="stylesheet" href="static/stylesheet.css">
+</head>
+
+<body>
+    <div id="languageDropdown">
+        <label for="selectLanguage">{{T "Select Language"}}</label>
+        <select id="language-selector">
+            {{range .SupportedLanguages}}
+            <option value="{{.}}" {{if eq . $.CurrentLanguage}}selected{{end}}>{{ T .String }}</option>
+            {{end}}
+        </select>
+    </div>
+    <h1>{{T .Header}}</h1>
+    <table>
+        <tr>
+            <th>{{T .PlayerName}}</th>
+            <th>{{T .Game}}</th>
+            <th>{{T .Category}}</th>
+            <th>{{T .Time}}</th>
+            <th>{{T .Date}}</th>
+        </tr>
+        {{range .Data}}
+        <tr>
+            <td>{{.PlayerName}}</td>
+            <td>{{.Game}}</td>
+            <td>{{.Category}}</td>
+            <td>{{.Time}}</td>
+            <td>{{FormatLocalizedDate .SubmittedAt $.CurrentLanguage}}</td>
+        </tr>
+        {{end}}
+    </table>
+
+    <!-- Your existing JavaScript code here -->
+    <script>
+        const languageSelector = document.getElementById("language-selector");
+
+        languageSelector.addEventListener("change", () => {
+            const selectedLanguage = languageSelector.value;
+            const currentUrl = window.location.href;
+            const newUrl = updateQueryStringParameter(currentUrl, 'lang', selectedLanguage);
+            window.location.href = newUrl;
+        });
+        function updateQueryStringParameter(uri, key, value) {
+            const re = new RegExp("([?&])" + key + "=.*?(&|$)", "i");
+            const separator = uri.indexOf('?') !== -1 ? "&" : "?";
+            if (uri.match(re)) {
+                return uri.replace(re, '$1' + key + "=" + value + '$2');
+            } else {
+                return uri + separator + key + "=" + value;
+            }
+        }
+    </script>
+</body>
+
+</html>
