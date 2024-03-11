@@ -3,10 +3,8 @@ package i18n
 import (
 	"encoding/json"
 	"fmt"
-	"io/ioutil"
 	"net/http"
 	"os"
-	"path"
 	"strings"
 	"time"
 
@@ -19,29 +17,13 @@ var (
 	defaultDomain = "default"
 )
 
-func getLocalePath() (string, error) {
-	rootPath, err := getPwdDirPath()
-	if err != nil {
-		return "", err
-	}
-	return path.Join(rootPath, "locales"), nil
-}
-
-func getPwdDirPath() (string, error) {
-	rootPath, err := os.Getwd()
-	if err != nil {
-		return "", err
-	}
-	return rootPath, nil
-}
-
 func Init() error {
 	localePath, err := getLocalePath()
 	if err != nil {
 		return err
 	}
 	languageCode := getLanguageCode()
-	fullLocale := NewLang(languageCode).String()
+	fullLocale := NewLanguageFromString(languageCode).String()
 	gotext.Configure(localePath, fullLocale, defaultDomain)
 	setupLocales(localePath)
 	fmt.Println("languageCode:", localePath)
@@ -70,7 +52,7 @@ func getLanguageCode() string {
 
 func setupLocales(localePath string) error {
 	// Get a list of all directories in the locale path
-	localeDirs, err := ioutil.ReadDir(localePath)
+	localeDirs, err := os.ReadDir(localePath)
 	if err != nil {
 		return err
 	}
@@ -79,9 +61,9 @@ func setupLocales(localePath string) error {
 	for _, dir := range localeDirs {
 		if dir.IsDir() {
 			langCode := LanguageCode(dir.Name())
-			enLocal := gotext.NewLocale(localePath, langCode.String())
-			enLocal.AddDomain(defaultDomain)
-			langMap[langCode] = enLocal
+			lang := gotext.NewLocale(localePath, langCode.String())
+			lang.AddDomain(defaultDomain)
+			langMap[langCode] = lang
 		}
 	}
 
@@ -101,7 +83,7 @@ func GetSupportedLanguages() []LanguageCode {
 	return languages
 }
 
-func NewLang(code string) LanguageCode {
+func NewLanguageFromString(code string) LanguageCode {
 	code = strings.ToLower(code)
 	if strings.Contains(code, "en") {
 		return EN
@@ -177,7 +159,7 @@ func SetCurrentLocale(lang string) {
 	}
 }
 
-func FormatLocalizedDate(t time.Time, lang language.Tag) string {
+func FormatLocalizedDate(t time.Time, lang string) string {
 	// Read date formats from JSON file
 	dateFormats, err := readDateFormatsFromFile("date_formats.json")
 	if err != nil {
@@ -187,27 +169,27 @@ func FormatLocalizedDate(t time.Time, lang language.Tag) string {
 	}
 
 	// Get the appropriate date format for the given language
-	format, ok := dateFormats[lang.String()]
+	format, ok := dateFormats[lang]
 	if !ok {
 		// If the language is not recognized, use a default format
 		return t.Format("02/01/2006 15:04:05")
 	}
 
 	// Load the appropriate time location based on the language tag
-	loc, err := time.LoadLocation(lang.String())
+	loc, err := time.LoadLocation(lang)
 	if err != nil {
 		// Log or handle error
 		// Fallback to default location if an error occurs
 		loc = time.UTC
 	}
-
+	fmt.Println(format)
 	// Format the time using the specified format and location
 	return t.In(loc).Format(format)
 }
 
 // readDateFormatsFromFile reads date formats from a JSON file.
 func readDateFormatsFromFile(filename string) (map[string]string, error) {
-	data, err := ioutil.ReadFile(filename)
+	data, err := os.ReadFile(filename)
 	if err != nil {
 		return nil, err
 	}

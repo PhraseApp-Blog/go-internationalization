@@ -103,3 +103,9 @@ msgstr "Αγγλικά"
 
 msgid "ar_SA"
 msgstr "Αραβικά"
+
+msgid "EntryAdded"
+msgid_plural "EntriesAdded"
+msgstr[0] "%d νέα καταχώριση προστέθηκε σήμερα"
+msgstr[1] "%d νέες καταχωρήσεις σήμερα"
+msgstr[2] "Καμία καταχωρήση σήμερα"

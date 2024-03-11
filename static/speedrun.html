@@ -9,12 +9,14 @@
 </head>
 
 <body>
-    <label for="selectLanguage">{{T "Select Language"}}</label>
-    <select id="language-selector">
-        {{range .SupportedLanguages}}
-        <option value="{{.}}" {{if eq . $.CurrentLanguage}}selected{{end}}>{{ T . }}</option>
-        {{end}}
-    </select>
+    <div id="languageDropdown">
+        <label for="selectLanguage">{{T "Select Language"}}</label>
+        <select id="language-selector">
+            {{range .SupportedLanguages}}
+            <option value="{{.}}" {{if eq . $.CurrentLanguage}}selected{{end}}>{{ T .String }}</option>
+            {{end}}
+        </select>
+    </div>
     <h2>{{T .Header}}</h2>
     <form id="speedrunForm">
         <label for="playerName">{{T .PlayerName}}:</label>

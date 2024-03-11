@@ -12,13 +12,15 @@ import (
 	"golang.org/x/text/language"
 )
 
-func HandleTemplate(w http.ResponseWriter, r *http.Request, tmplName string, data interface{}) {
+func HandleTemplate(w http.ResponseWriter, r *http.Request,
+	tmplName string, data interface{}) {
 	// Parse the template
 	tmpl, err := template.New(tmplName).Funcs(template.FuncMap{
 		"T":  i18n.T,
 		"TN": i18n.TN,
-		"FormatLocalizedDate": func(submittedAt time.Time, currentLanguage i18n.LanguageCode) string {
-			return i18n.FormatLocalizedDate(submittedAt, language.Make(currentLanguage.String()))
+		"FormatLocalizedDate": func(submittedAt time.Time,
+			currentLanguage i18n.LanguageCode) string {
+			return i18n.FormatLocalizedDate(submittedAt, currentLanguage.String())
 		},
 		"FormatNumber": func(number int64, currentLanguage i18n.LanguageCode) string {
 			return i18n.FormatNumber(number, language.Make(currentLanguage.String()))
