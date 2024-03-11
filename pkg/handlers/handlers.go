@@ -46,6 +46,18 @@ type FormattedSpeedrun struct {
 	SubmittedAt string
 }
 
+type TemplateData struct {
+	Header     string
+	Title      string
+	PlayerName string
+	Game       string
+	Category   string
+	Time       string
+	Date       string
+	Submit     string
+	Data       []model.Speedrun
+}
+
 func HandleIndex(w http.ResponseWriter, r *http.Request, data []model.Speedrun) {
 	fmt.Println(i18n.GetCurrentLanguage())
 	HandleTemplate(w, r, "index.html", map[string]interface{}{
@@ -91,3 +103,17 @@ func SetCurrentLanguage(next http.Handler) http.Handler {
 		next.ServeHTTP(w, r.WithContext(ctx))
 	})
 }
+
+// Use this starter code to map page names to template data.
+// Then on each handler instead of hardcoding the page template data, you use the mergeTemplateData function to merge the page template data with the extra data you want to pass to the template.
+
+// var pageTemplateData map[string]map[string]interface{}
+
+// func mergeTemplateData(page string, extraData interface{}) map[string]interface{} {
+// 	data := pageTemplateData[page]
+// 	data["Data"] = extraData
+// 	data["Dir"] = i18n.LanguageDirectionMap[i18n.GetCurrentLanguage()]
+// 	data["CurrentLanguage"] = i18n.GetCurrentLanguage()
+// 	data["SupportedLanguages"] = i18n.GetSupportedLanguages()
+// 	return data
+// }
