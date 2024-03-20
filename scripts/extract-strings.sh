@@ -11,6 +11,16 @@ extract_messages() {
     rm -rf "$workdir"
   fi
   mkdir "$workdir"
+
+  # The following flags are:
+
+  # -c extract-strings: This flag specifies the action to perform, which in this case is to extract translation strings from the source code.
+  # -po: This flag indicates that the output format should be .po files.
+  # -d: This flag specifies the directory to search for Go source code files. Here, . represents the current directory.
+  # r: This flag tells the tool to search for Go source code files recursively within the specified directory.
+  # -o "$workdir": This flag specifies the output directory where the extracted translation strings will be saved. The $workdir variable contains the path to the working directory, where the extracted strings will be stored.
+  # —ignore-regexp "$ignored": This flag specifies a regular expression pattern to ignore certain files or directories during the extraction process. The $ignored variable contains the pattern for files or directories to ignore.
+  # —output-match-package: This flag indicates that the extracted translation strings should be grouped by package.
   i18n4go -c extract-strings -v --po -d . -r -o "$workdir" --ignore-regexp "$ignored" -output-match-package
 }
 

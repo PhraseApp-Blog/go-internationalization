@@ -5,12 +5,9 @@ body {
   padding: 0;
 }
 .container {
-  max-width: 800px;
+  max-width: 64rem;
   margin: 20px auto;
   padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 h1,
 h2,
@@ -55,7 +52,6 @@ button:hover {
 }
 
 h1, h2, form {
-  text-align: center;
   margin-top: 20px;
   color: #333;
 }
@@ -75,8 +71,6 @@ li {
 }
 table {
   border-collapse: collapse;
-  width: 80%;
-  margin: 20px auto;
   background-color: #fff;
 }
 

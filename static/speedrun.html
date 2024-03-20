@@ -17,22 +17,24 @@
             {{end}}
         </select>
     </div>
-    <h2>{{T .Header}}</h2>
-    <form id="speedrunForm">
-        <label for="playerName">{{T .PlayerName}}:</label>
-        <input type="text" id="playerName" name="playerName" required><br>
+    <div class="container">
+        <h2>{{T .Header}}</h2>
+        <form id="speedrunForm">
+            <label for="playerName">{{T .PlayerName}}:</label>
+            <input type="text" id="playerName" name="playerName" required><br>
 
-        <label for="game">{{T .Game}}:</label>
-        <input type="text" id="game" name="game" required><br>
+            <label for="game">{{T .Game}}:</label>
+            <input type="text" id="game" name="game" required><br>
 
-        <label for="category">{{T .Category}}:</label>
-        <input type="text" id="category" name="category" required><br>
+            <label for="category">{{T .Category}}:</label>
+            <input type="text" id="category" name="category" required><br>
 
-        <label for="time">{{T .Time}}:</label>
-        <input type="text" id="time" name="time" required><br>
+            <label for="time">{{T .Time}}:</label>
+            <input type="text" id="time" name="time" required><br>
 
-        <button type="submit">{{T .Submit}}</button>
-    </form>
+            <button type="submit">{{T .Submit}}</button>
+        </form>
+    </div>
 
     <script>
         const speedrunForm = document.getElementById('speedrunForm');

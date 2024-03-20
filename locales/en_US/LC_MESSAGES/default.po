@@ -223,3 +223,9 @@ msgstr "json:\"category\""
 # filename: pkg/model/speedrun.go, offset: 198, line: 9, column: 24
 msgid "json:\"time\""
 msgstr "json:\"time\""
+
+msgid "EntryAdded"
+msgid_plural "EntriesAdded"
+msgstr[0] "%d new Entry Added today"
+msgstr[1] "%d new Entries today"
+msgstr[2] "No new Entries today"

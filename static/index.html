@@ -17,27 +17,30 @@
             {{end}}
         </select>
     </div>
-    <h1>{{T .Header}}</h1>
-    <table>
-        <tr>
-            <th>{{T .PlayerName}}</th>
-            <th>{{T .Game}}</th>
-            <th>{{T .Category}}</th>
-            <th>{{T .Time}}</th>
-            <th>{{T .Date}}</th>
-        </tr>
-        {{range .Data}}
-        <tr>
-            <td>{{.PlayerName}}</td>
-            <td>{{.Game}}</td>
-            <td>{{.Category}}</td>
-            <td>{{.Time}}</td>
-            <td>{{FormatLocalizedDate .SubmittedAt $.CurrentLanguage}}</td>
-        </tr>
-        {{end}}
-    </table>
+    <div class="container">
+        <h1>{{T .Header}}</h1>
+        <table>
+            <tr>
+                <th>{{T .PlayerName}}</th>
+                <th>{{T .Game}}</th>
+                <th>{{T .Category}}</th>
+                <th>{{T .Time}}</th>
+                <th>{{T .Date}}</th>
+            </tr>
+            {{range .Data}}
+            <tr>
+                <td>{{.PlayerName}}</td>
+                <td>{{.Game}}</td>
+                <td>{{.Category}}</td>
+                <td>{{.Time}}</td>
+                <td>{{FormatLocalizedDate .SubmittedAt $.CurrentLanguage}}</td>
+            </tr>
+            {{end}}
+        </table>
     <p>{{TN "EntryAdded" "EntriesAdded" 5}}</p>
     <!-- Your existing JavaScript code here -->
+    </div>
+    
     <script>
         const languageSelector = document.getElementById("language-selector");
 
