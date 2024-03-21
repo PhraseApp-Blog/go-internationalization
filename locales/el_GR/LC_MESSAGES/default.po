@@ -21,7 +21,7 @@ msgstr "Speedrun Leaderboard"
 
 # filename: pkg/handlers/handlers.go, offset: 2102, line: 66, column: 25
 msgid "Player Name"
-msgstr "Player Name"
+msgstr "Όνομα Παίχτη"
 
 # filename: pkg/handlers/handlers.go, offset: 2173, line: 68, column: 25
 msgid "Category"
